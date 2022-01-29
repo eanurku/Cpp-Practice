@@ -13,12 +13,15 @@ using namespace std;
 
 Person::Person(string first,string last):firstName(first),lastName(last)
 {
-
+  cout<<"Person(string,string) constructor called.."<<endl;
 };
 
 string Person::getName(){
 	return firstName+" "+lastName;
 }
 
+Person::~Person(){
+	cout<<"Person destructor called..."<<endl;
+}
 
 

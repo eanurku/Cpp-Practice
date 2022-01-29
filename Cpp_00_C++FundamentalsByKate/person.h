@@ -15,5 +15,6 @@ public:
 	Person()=default;
 	Person(std::string firstname, std::string secondname);
 	std::string getName();
+	~Person();
 
 };
