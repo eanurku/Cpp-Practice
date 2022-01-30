@@ -19,14 +19,17 @@ int main() {
 	Person* p2=new Person("monu","kumar");
 	Person* p3=p2;
 	cout<<p2->getName()<<" "<<p3->getName()<<endl;
+	p2=nullptr;
 	delete p2;
-	delete p2;
+
 
 
 	cout<<p2->getName()<<endl;//ERROR as p2 is deleted/freed
 	cout<<p3->getName()<<endl;//ERROR as p3 and p2 are pointing same object and it is already deleted
 
+	//delete nullptr;//ERROR delet on NULL pointer not allowed
 
+	cout<<"successfull"<<endl;
 	return 0;
 }
 

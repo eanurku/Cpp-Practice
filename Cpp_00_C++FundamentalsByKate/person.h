@@ -4,6 +4,7 @@
  *  Created on: Jan 26, 2022
  *      Author: anura
  */
+#pragma once
 #include <iostream>
 
 class Person {
@@ -14,7 +15,7 @@ private:
 public:
 	Person()=default;
 	Person(std::string firstname, std::string secondname);
-	std::string getName();
-	~Person();
+	virtual std::string getName();
+	virtual ~Person();
 
 };
