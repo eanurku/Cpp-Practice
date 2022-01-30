@@ -26,14 +26,15 @@ int main() {
 	if (answer == "yes") {
 		t2 = dynamic_cast<Twitter*>(p1Pointer);
 	} else {
-		//t2=dynamic_cast<Twitter*>(&res1);//Compiler ERROR
+		t2=dynamic_cast<Twitter*>(&res1);//Compiler ERROR if Resource is not having virtual functions
 	}
 
 	if (t2) {
 		cout << "dynamic casting done... " << t2->getName() << endl;
 	} else {
-		cout << "dynamic casting not done..." << endl;
+		cout << "dynamic casting not done..." <<t2->getName()<< endl;
 	}
 
+	cout<<"successfull!!!"<<endl;
 	return 0;
 }

@@ -13,6 +13,6 @@ private:
 	std::string resName;
 public:
 	Resource(std::string name);
-	~Resource();
-	std::string getName();
+	virtual ~Resource();
+	virtual std::string getName();
 };
