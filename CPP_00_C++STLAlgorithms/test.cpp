@@ -11,7 +11,7 @@
 #include <cstring>
 using namespace std;
 
-int main(void) {
+int main() {
 	puts("C++ STL Algorithms");
 	cout<<"hello"<<endl;
 	return EXIT_SUCCESS;
