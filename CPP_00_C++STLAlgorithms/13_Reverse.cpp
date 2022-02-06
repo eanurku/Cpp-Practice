@@ -13,7 +13,7 @@
 using namespace std;
 
 int main() {
-	vector<int> source{1,2,3,4,5,6};
+
 
 	//reverse()
 	string sentence="hi i am good";
@@ -28,6 +28,8 @@ int main() {
     cout<<sentence1<<endl;
     reverse_copy(begin(sentence1), end(sentence1), begin(revSentence1));
     cout<<revSentence1<<endl;
+    cout<<endl;
+
 
 	return 0;
 }

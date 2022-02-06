@@ -1,8 +1,7 @@
 clean:
 	-del -f *.exe
 
-all:  test 01_Counting 02_Finding 03_Sorting 04_ComparingCollections 05_Accumulate 06_ForEachLoop 07_Copying 08_Removing 09_Filling 10_Replace 11_Transform 12_Unique 13_Reverse
-		
+all:  test 01_Counting 02_Finding 03_Sorting 04_ComparingCollections 05_Accumulate 06_ForEachLoop 07_Copying 08_Removing 09_Filling 10_Replace 11_Transform 12_Unique 13_Reverse 14_swap		
 test: test.cpp
 	g++ -o test test.cpp
 		
@@ -45,5 +44,5 @@ test: test.cpp
 13_Reverse: 13_Reverse.cpp
 	g++ -o 13_Reverse 13_Reverse.cpp
 
-test: test.cpp
-	g++ -o test test.cpp		
+14_swap: 14_swap.cpp
+	g++ -o 14_swap 14_swap.cpp		
