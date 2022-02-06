@@ -1,7 +1,7 @@
 clean:
 	-del -f *.exe
 	
-all:  test 01_Counting 02_Finding 03_Sorting 04_ComparingCollections 05_Accumulate 06_ForEachLoop
+all:  test 01_Counting 02_Finding 03_Sorting 04_ComparingCollections 05_Accumulate 06_ForEachLoop 07_Copying 08_Removing
 
 test: test.cpp
 	g++ -o test test.cpp
@@ -23,3 +23,21 @@ test: test.cpp
 	
 06_ForEachLoop: 06_ForEachLoop.cpp
 	g++ -o 06_ForEachLoop 06_ForEachLoop.cpp
+
+07_Copying: 07_Copying.cpp
+	g++ -o 07_Copying 07_Copying.cpp
+	
+08_Removing: 08_Removing.cpp
+	g++ -o 08_Removing 08_Removing.cpp
+
+test: test.cpp
+	g++ -o test test.cpp
+	
+test: test.cpp
+	g++ -o test test.cpp
+	
+	
+test: test.cpp
+	g++ -o test test.cpp
+	
+		
