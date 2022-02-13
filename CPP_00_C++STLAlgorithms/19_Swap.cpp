@@ -9,7 +9,7 @@
 #include <vector>
 #include <algorithm>
 #include <random>
-#include <bits/stdc++.h>
+#include <utility>
 using namespace std;
 
 int main() {
@@ -23,10 +23,15 @@ int main() {
 	int second=20;
 	cout<<"swap()"<<endl;
 	cout<<"a="<<first<<" ,b="<<second<<endl;
-	swap(first, second);
+	//swap(first, second);//WHY compiler showing it error on swap()?
 	cout<<"a="<<first<<" ,b="<<second<<endl;
 	cout<<endl;
 
+	//swap() on collection
+
+	//swap(list[0],list[1]);WHY compiler showing it error on swap()?
+	for_each(begin(list),end(list),[](auto e){cout<<e<<" ";});cout<<endl;
+	cout<<endl;
 	//iter_swap
 	vector<int> v1=list;
 	iter_swap(begin(v1),begin(v1)+4);
