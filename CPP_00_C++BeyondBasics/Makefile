@@ -1,7 +1,7 @@
 clean:
 	-del -f *.exe
 	
-all:  test 01_LambdaCalledWithArguments
+all:  test 01_LambdaCalledWithArguments 02_LambdaAsTinyFunctions 03_LambdaCaptureByValue 04_lambdaCaptureByReference
 
 test: test.cpp
 	g++ -o test test.cpp
@@ -9,14 +9,14 @@ test: test.cpp
 01_LambdaCalledWithArguments: 01_LambdaCalledWithArguments.cpp
 	g++ -o 01_LambdaCalledWithArguments 01_LambdaCalledWithArguments.cpp
 	
-test: test.cpp
-	g++ -o test test.cpp
+02_LambdaAsTinyFunctions: 02_LambdaAsTinyFunctions.cpp
+	g++ -o 02_LambdaAsTinyFunctions 02_LambdaAsTinyFunctions.cpp
 
-test: test.cpp
-	g++ -o test test.cpp
+03_LambdaCaptureByValue: 03_LambdaCaptureByValue.cpp
+	g++ -o 03_LambdaCaptureByValue 03_LambdaCaptureByValue.cpp
 
-test: test.cpp
-	g++ -o test test.cpp
+04_lambdaCaptureByReference: 04_lambdaCaptureByReference.cpp
+	g++ -o 04_lambdaCaptureByReference 04_lambdaCaptureByReference.cpp
 
 test: test.cpp
 	g++ -o test test.cpp
