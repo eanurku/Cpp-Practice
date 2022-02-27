@@ -18,7 +18,9 @@ int main() {
 	auto v1=source;
 	cout<<"fill()"<<endl;
 	for_each(begin(v1),end(v1),[](auto e){cout<<e<<" ";});cout<<endl;
+
 	fill(begin(v1), end(v1), 1);
+
 	for_each(begin(v1),end(v1),[](auto e){cout<<e<<" ";});cout<<endl;
 	cout<<endl;
 
@@ -27,7 +29,9 @@ int main() {
 	cout<<"fill_n()"<<endl;
 	for_each(begin(v2),end(v2),[](auto e){cout<<e<<" ";});cout<<endl;
 	int NumberOfElementsTobeFilled=3;
+
 	fill_n(begin(v2), NumberOfElementsTobeFilled, 1);
+
 	for_each(begin(v2),end(v2),[](auto e){cout<<e<<" ";});cout<<endl;
 	cout<<endl;
 
@@ -35,7 +39,9 @@ int main() {
 	auto v3=source;
 	cout<<"iota()"<<endl;
 	for_each(begin(v3),end(v3),[](auto e){cout<<e<<" ";});cout<<endl;
+
 	iota(begin(v3), end(v3), 5);
+
 	for_each(begin(v3),end(v3),[](auto e){cout<<e<<" ";});cout<<endl;
 	cout<<endl;
 
@@ -43,8 +49,10 @@ int main() {
 	auto v4=source;
 	cout<<"generate()"<<endl;
 	for_each(begin(v4),end(v4),[](auto e){cout<<e<<" ";});cout<<endl;
+
 	int counter=3;
 	generate(begin(v4), end(v4),[&counter](){counter=counter+1;return counter;} );
+
 	for_each(begin(v4),end(v4),[](auto e){cout<<e<<" ";});cout<<endl;
 	cout<<endl;
 
@@ -52,9 +60,11 @@ int main() {
 	auto v5=source;
 	cout<<"generate_n()"<<endl;
 	for_each(begin(v5),end(v5),[](auto e){cout<<e<<" ";});cout<<endl;
+
 	counter=3;
 	NumberOfElementsTobeFilled=5;
 	generate_n(begin(v5),NumberOfElementsTobeFilled ,[&counter](){counter=counter+1;return counter;} );
+
 	for_each(begin(v5),end(v5),[](auto e){cout<<e<<" ";});cout<<endl;
 	cout<<endl;
 	return 0;
