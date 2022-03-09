@@ -1,7 +1,7 @@
 clean:
 	-del -f *.exe
 	
-all:  test 01_LambdaCalledWithArguments 02_LambdaAsTinyFunctions 03_LambdaCaptureByValue 04_lambdaCaptureByReference 05_LambdaReturnType
+all:  test 01_LambdaCalledWithArguments 02_LambdaAsTinyFunctions 03_LambdaCaptureByValue 04_lambdaCaptureByReference 05_LambdaReturnType 06_ExceptionTryAndCatchBlock 07_ExceptionUnwindingStack
 
 test: test.cpp
 	g++ -o test test.cpp
@@ -21,8 +21,8 @@ test: test.cpp
 05_LambdaReturnType: 05_LambdaReturnType.cpp
 	g++ -o 05_LambdaReturnType 05_LambdaReturnType.cpp
 
-test: test.cpp
-	g++ -o test test.cpp
+06_ExceptionTryAndCatchBlock: 06_ExceptionTryAndCatchBlock.cpp
+	g++ -o 06_ExceptionTryAndCatchBlock 06_ExceptionTryAndCatchBlock.cpp
 
-test: test.cpp
-	g++ -o test test.cpp
+07_ExceptionUnwindingStack: 07_ExceptionUnwindingStack.cpp
+	g++ -o 07_ExceptionUnwindingStack 07_ExceptionUnwindingStack.cpp person.cpp

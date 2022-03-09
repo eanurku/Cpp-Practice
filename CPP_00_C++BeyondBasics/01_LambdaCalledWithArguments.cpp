@@ -12,7 +12,7 @@
 using namespace std;
 
 int main() {
-	auto isOdd=[](auto e){return e%2!=0l;};
+	auto isOdd=[](auto e){return e%2!=0;};
 	bool result=isOdd(5);
 	cout<<result<<endl;
 
