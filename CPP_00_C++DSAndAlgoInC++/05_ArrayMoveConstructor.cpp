@@ -1,15 +1,14 @@
 /*
- * 04_ArrayCopyAssignment.cpp
+ * 05_ArrayMoveConstructor.cpp
  *
  *  Created on: Mar 27, 2022
- *      Author: anurag
+ *      Author: anura
  */
 
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <random>
-#include <utility>
 using namespace std;
 class OutOfBoundArrayException: public std::exception {
 
@@ -23,7 +22,9 @@ public:
 	//avoid use of default copy constructor by marking it deleted function
 	//IntArray(const IntArray&) = delete ;
 
+	//custom copy constructor
 	IntArray(const IntArray &source) {
+		cout<<"custom copy constructor is called..."<<endl;
 		if (source.size != 0) {
 			m_ptr = new int[source.size];
 			size = source.size;
@@ -33,12 +34,25 @@ public:
 		}
 	}
 
+	//move constructor
+	IntArray(IntArray&& source){
+		cout<<" move constructor is called..."<<endl;
+		//transfer data
+		m_ptr=source.m_ptr;
+		size=source.size;
+
+		//clear
+		source.m_ptr=nullptr;
+		source.size=0;
+	}
 	explicit IntArray(int size) {
 		if (size != 0) {
 			this->m_ptr = new int[size] { };
 			this->size = size;
 		}
 	}
+
+
 	~IntArray() {
 		delete[] this->m_ptr;
 	}
@@ -66,6 +80,7 @@ public:
 	//Overloading of operator<<  can be done by friend function/free function
 	friend std::ostream& operator<<(std::ostream &os, IntArray &array) {
 
+
 		os << "[";
 		for (int i = 0; i < array.getSize(); i++) {
 			os << array[i] << " ";
@@ -76,6 +91,7 @@ public:
 	}
 
 	IntArray& operator=(IntArray source) { //copy by custom constructor for  parameter source
+		cout<<"custom copy assignment is called"<<endl;
 		//swap pointers and size
 		int *tmpPtr = source.m_ptr;
 		source.m_ptr = m_ptr;
@@ -87,18 +103,19 @@ public:
 		//source destructor will be called to clean up old values
 	}
 };
+
+IntArray fun(IntArray& array){
+	array[0]=100;
+	IntArray b=array;
+
+	return std::move(b);
+}
+
 int main() {
+	IntArray firstArray{10};
+	IntArray newArray=fun(firstArray);
 
-	IntArray firstArray { 10 };
-	IntArray secondArray { 10 };
-	secondArray = firstArray;
-
-	firstArray[4] = 22;
-	firstArray[6] = 33;
-	//copy by assignment using default assignment operator does shallow copy
-	cout << firstArray << endl;
-	cout << secondArray << endl;
+	cout<<newArray<<endl;
 
 	return 0;
 }
-
