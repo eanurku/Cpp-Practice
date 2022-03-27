@@ -3,6 +3,9 @@
  *
  *  Created on: Mar 27, 2022
  *      Author: anura
+ *
+ *     1. overloading operator<< for ArrayClass
+ *
  */
 #include <iostream>
 #include <vector>
@@ -48,18 +51,19 @@ public:
 		}
 		return this->m_ptr[index];
 	}
-};
 
-std::ostream& operator<<(std::ostream& os, IntArray& array) {
+	//Overloading of operator<<  can be done by friend function/free function
+	friend std::ostream& operator<<(std::ostream& os, IntArray& array) {
 
-	os<<"[";
-	for(int i=0;i<array.getSize();i++){
-		os<<array[i]<<" ";
+		os<<"[";
+		for(int i=0;i<array.getSize();i++){
+			os<<array[i]<<" ";
+		}
+		os<<"]";
+
+		return os;
 	}
-	os<<"]";
-
-	return os;
-}
+};
 
 int main() {
 	cout << "array class improvements" << endl; // prints !!!Hello World!!!
