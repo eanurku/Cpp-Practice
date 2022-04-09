@@ -1,7 +1,7 @@
 clean:
 	-del -f *.exe
 	
-all:  test  01_ArrayClass 02_ArrayClassImproved 03_ArrayCopyConstructor 04_ArrayCopyAssignment 05_ArrayMoveConstructor
+all:  test  01_ArrayClass 02_ArrayClassImproved 03_ArrayCopyConstructor 04_ArrayCopyAssignment 05_ArrayMoveConstructor 06_ArrayClassTemplate
 
 test: 01_ArrayClass.cpp
 	g++ -o 01_ArrayClass 01_ArrayClass.cpp
@@ -18,8 +18,8 @@ test: 01_ArrayClass.cpp
 05_ArrayMoveConstructor: 05_ArrayMoveConstructor.cpp
 	g++ -o 05_ArrayMoveConstructor 05_ArrayMoveConstructor.cpp
 	
-test: 01_ArrayClass.cpp
-	g++ -o 01_ArrayClass 01_ArrayClass.cpp
+06_ArrayClassTemplate: 06_ArrayClassTemplate.cpp
+	g++ -o 06_ArrayClassTemplate 06_ArrayClassTemplate.cpp
 
 test: 01_ArrayClass.cpp
 	g++ -o 01_ArrayClass 01_ArrayClass.cpp

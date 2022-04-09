@@ -1,5 +1,5 @@
 /*
- * 05_ArrayMoveConstructor.cpp
+ * 06_ArrayClassTemplate.cpp
  *
  *  Created on: Mar 27, 2022
  *      Author: anura
@@ -13,20 +13,22 @@ using namespace std;
 class OutOfBoundArrayException: public std::exception {
 
 };
-class IntArray {
+
+template <typename T>
+class ArrayClass {
 private:
 	int size { 0 };
-	int *m_ptr { nullptr };
+	T* m_ptr { nullptr };
 public:
-	IntArray() = default;
+	ArrayClass() = default;
 	//avoid use of default copy constructor by marking it deleted function
 	//IntArray(const IntArray&) = delete ;
 
 	//custom copy constructor
-	IntArray(const IntArray &source) {
+	ArrayClass(const ArrayClass &source) {
 		cout<<"custom copy constructor is called..."<<endl;
 		if (source.size != 0) {
-			m_ptr = new int[source.size];
+			m_ptr = new T[source.size];
 			size = source.size;
 			for (int i = 0; i < source.size; i++) {
 				m_ptr[i] = source.m_ptr[i];
@@ -35,7 +37,7 @@ public:
 	}
 
 	//move constructor
-	IntArray(IntArray&& source){
+	ArrayClass(ArrayClass&& source){
 		cout<<" move constructor is called..."<<endl;
 		//transfer data
 		m_ptr=source.m_ptr;
@@ -45,15 +47,15 @@ public:
 		source.m_ptr=nullptr;
 		source.size=0;
 	}
-	explicit IntArray(int size) {
+	explicit ArrayClass(int size) {
 		if (size != 0) {
-			this->m_ptr = new int[size] { };
+			this->m_ptr = new T[size] { };
 			this->size = size;
 		}
 	}
 
 
-	~IntArray() {
+	~ArrayClass() {
 		delete[] this->m_ptr;
 	}
 
@@ -78,7 +80,9 @@ public:
 	}
 
 	//Overloading of operator<<  can be done by friend function/free function
-	friend std::ostream& operator<<(std::ostream &os, IntArray &array) {
+	friend std::ostream& operator<<(std::ostream &os, ArrayClass &array) {
+
+
 		os << "[";
 		for (int i = 0; i < array.getSize(); i++) {
 			os << array[i] << " ";
@@ -88,10 +92,10 @@ public:
 		return os;
 	}
 
-	IntArray& operator=(IntArray source) { //copy by custom constructor for  parameter source
+	ArrayClass& operator=(ArrayClass source) { //copy by custom constructor for  parameter source
 		cout<<"custom copy assignment is called"<<endl;
 		//swap pointers and size
-		int *tmpPtr = source.m_ptr;
+		T *tmpPtr = source.m_ptr;
 		source.m_ptr = m_ptr;
 		m_ptr = tmpPtr;
 		int tmpValue = source.size;
@@ -101,19 +105,20 @@ public:
 		//source destructor will be called to clean up old values
 	}
 };
-
-IntArray fun(IntArray& array){
+ArrayClass<int> fun(ArrayClass<int>& array){
 	array[0]=100;
-	IntArray b=array;
+	ArrayClass<int> b=array;
 
 	return std::move(b);
 }
-
 int main() {
-	IntArray firstArray{10};
-	IntArray newArray=fun(firstArray);
+
+	ArrayClass<int> firstArray{10};
+	ArrayClass<int> newArray=fun(firstArray);
 
 	cout<<newArray<<endl;
-
 	return 0;
 }
+
+
+
