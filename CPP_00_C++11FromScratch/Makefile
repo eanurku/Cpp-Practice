@@ -1,7 +1,7 @@
 clean:
 	-del -f *.exe
 	
-all:  test 01_Initialization 02_RoundoffError 03_StringInitialization 04_Const 05_FunctionPassingParameters 06_Vector 07_ReadingFile
+all:  test 01_Initialization 02_RoundoffError 03_StringInitialization 04_Const 05_FunctionPassingParameters 06_Vector 07_ReadingFile 08_CustomClass 09_RaiiPattern
 
 test: test.cpp
 	g++ -o test test.cpp
@@ -27,5 +27,9 @@ test: test.cpp
 07_ReadingFile: 07_ReadingFile.cpp
 	g++ -o 07_ReadingFile 07_ReadingFile.cpp
 
-test: test.cpp
-	g++ -o test test.cpp
+08_CustomClass: 08_CustomClass.cpp
+	g++ -o 08_CustomClass 08_CustomClass.cpp
+	
+09_RaiiPattern: 09_RaiiPattern.cpp
+	g++ -o 09_RaiiPattern 09_RaiiPattern.cpp
+	
