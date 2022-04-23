@@ -18,7 +18,7 @@ int main() {
 
 
 	//setting and accessing out of bound element,
-	//cause crash or overriding of memeory used by other app
+	//cause crash or overriding of memory used by other app
 	vector<int> nums1{1,2,3};
 	nums1[4]=33;
 	cout<<"capacity="<<nums1.capacity()<<endl;
