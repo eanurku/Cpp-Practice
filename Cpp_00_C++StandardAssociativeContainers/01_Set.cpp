@@ -42,6 +42,10 @@ int main() {
 	}else{
 		cout<<"not found"<<endl;
 	}
+
+	for(auto& e:names){
+		cout<<e<<endl;
+	}
 	return 0;
 }
 
