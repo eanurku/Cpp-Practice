@@ -66,7 +66,7 @@ int main() {
 	numMap.erase(3);
 	cout<<numMap<<endl;
 
-	//remoive all evens keys pair
+	//remove all evens keys pair
 	for(auto it=numMap.begin(),last=numMap.end();it!=last;){
 		if((*it).first%2==0){
 			it=numMap.erase(it);
