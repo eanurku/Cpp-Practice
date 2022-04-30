@@ -1,0 +1,9 @@
+Design Patterns are very popular among software 
+developers. A design pattern is a well-described 
+solution to a common software problem.
+I have written extensively on java design patterns. 
+You can download PDF eBook 130+ pages by subscribing
+to our newsletter.
+solution to a common software problem.
+I have written extensively on java design patterns. 
+Design Patterns are very popular among software

@@ -1,7 +1,7 @@
 clean:
 	-del -f *.exe
 	
-all:  test 01_Set 02_SetOfCustomObjects 03_Map
+all:  test 01_Set 02_SetOfCustomObjects 03_Map 04_UnorderedMap
 
 test: test.cpp
 	g++ -o test test.cpp
@@ -15,8 +15,8 @@ test: test.cpp
 03_Map: 03_Map.cpp
 	g++ -o 03_Map 03_Map.cpp
 
-test: test.cpp
-	g++ -o test test.cpp
+04_UnorderedMap: 04_UnorderedMap.cpp
+	g++ -o 04_UnorderedMap 04_UnorderedMap.cpp
 
 test: test.cpp
 	g++ -o test test.cpp
