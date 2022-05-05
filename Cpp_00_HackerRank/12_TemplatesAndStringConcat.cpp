@@ -1,17 +1,15 @@
-//============================================================================
-// Name        : Test.cpp
-// Author      : anurag
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C, Ansi-style
-//============================================================================
+/*
+ * 12_TemplatesAndStringConcat.cpp
+ *
+ *  Created on: May 3, 2022
+ *      Author: anura
+ */
 #include <cmath>
 #include <cstdio>
 #include <vector>
 #include <iostream>
 #include <algorithm>
 #include <cassert>
-#include <ctime>
 using namespace std;
 
 int start_up() {
@@ -47,41 +45,38 @@ public:
 	AddElements(string arg) {
 		element = arg;
 	}
-	string concatenate(string& other) {
+	string concatenate(string other) {
 		string result{};
 		result.reserve(element.size()+other.size());
 		result+=element;
 		result+=other;
 		return result;
-
 	}
 };
+
 int main() {
 	int n, i;
-	auto start=clock();
 	cin >> n;
 	for (i = 0; i < n; i++) {
-		string type{"string"};
-		//cin >> type;
+		string type;
+		cin >> type;
 		if (type == "float") {
 			double element1, element2;
-			//cin >> element1 >> element2;
+			cin >> element1 >> element2;
 			AddElements<double> myfloat(element1);
 			cout << myfloat.add(element2) << endl;
 		} else if (type == "int") {
 			int element1, element2;
-			//cin >> element1 >> element2;
+			cin >> element1 >> element2;
 			AddElements<int> myint(element1);
 			cout << myint.add(element2) << endl;
 		} else if (type == "string") {
-			string element1{"firstfirst"}, element2{"secondsecond"};
-			//cin >> element1 >> element2;
+			string element1, element2;
+			cin >> element1 >> element2;
 			AddElements<string> mystring(element1);
-			mystring.concatenate(element2);
+			cout << mystring.concatenate(element2) << endl;
 		}
 	}
-
-	cout<<"time ="<< (float)(clock()-start)/CLOCKS_PER_SEC<<endl;
 	return 0;
 }
 
