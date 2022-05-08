@@ -1,3 +1,10 @@
+/*
+ * 17_ExceptionHandling.cpp
+ *
+ *  Created on: May 7, 2022
+ *      Author: anurag
+ */
+
 #include <iostream>
 #include <exception>
 #include <string>
@@ -23,11 +30,9 @@ public:
 		int ans = v.at(B);
 		return real + A - B * ans;
 	}
-
 	static int getLoad() {
 		return load;
 	}
-
 };
 int Server::load = 0;
 
@@ -40,7 +45,7 @@ int main() {
 
 		try {
 
-		    cout<<Server::compute(A, B)<<endl;
+			cout<<Server::compute(A, B)<<endl;
 
 		} catch (invalid_argument &e) {
 
@@ -49,9 +54,7 @@ int main() {
 		} catch (bad_alloc &e) {
 
 			cout << "Not enough memory" << endl;
-
-		} catch(int e){
-
+		}catch(int e){
 			cout<<"Other Exception"<<endl;
 		}
 
@@ -70,3 +73,6 @@ int main() {
 //   4. Use the Error List window to view errors
 //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
+
+
