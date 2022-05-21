@@ -1,7 +1,7 @@
 clean:
 	-del -f *.exe
 	
-all:  test  01_Precision 02_StringsSwapCharacter 03_StringStream 04_OperatorOverloading 05_VectorSorting
+all:  test  01_Precision 02_StringsSwapCharacter 03_StringStream 04_OperatorOverloading 05_VectorSorting 22_VariadicTemplate
 
 test: test.cpp
 	g++ -o test test.cpp
@@ -21,8 +21,8 @@ test: test.cpp
 05_VectorSorting: 05_VectorSorting.cpp
 	g++ -o 05_VectorSorting 05_VectorSorting.cpp
 
-test: test.cpp
-	g++ -o test test.cpp
+22_VariadicTemplate: 22_VariadicTemplate.cpp
+	g++ -o 22_VariadicTemplate 22_VariadicTemplate.cpp
 
 test: test.cpp
 	g++ -o test test.cpp
