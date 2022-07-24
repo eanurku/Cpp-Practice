@@ -21,6 +21,7 @@ int main() {
 	transform(begin(v1), end(v1), begin(v1), [](auto e){return e*2;});
 	for_each(begin(v1),end(v1),[](auto e){cout<<e<<" ";});cout<<endl;
 	cout<<endl;
+
 	//transform
 	auto v2=source;
 	auto v3=source;

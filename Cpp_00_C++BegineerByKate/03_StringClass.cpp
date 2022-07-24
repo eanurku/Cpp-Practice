@@ -24,7 +24,7 @@ int main()
     getline(cin, str);
     cout << str<<"\n";
 
-    //memebr functions in string
+    //member functions in string
     cout << str.substr(3, 6)<<"\n";
     cout << str.length()<<"\n";
 

@@ -17,7 +17,7 @@ private:
 public:
 	Twitter(std::string firstname,std::string lastname,std::string handle);
 	~Twitter();
-	std::string getName();
+	 std::string getName();
 
 
 

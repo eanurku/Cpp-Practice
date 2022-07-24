@@ -10,8 +10,8 @@ int main() {
 
 
 	std::cout << "hello";
-	std::cout << "hello" + '\n';
-	std::cout << "hello" + '\n';
+	std::cout << "hello" << '\n';
+	std::cout << "hello"<< '\n';
 	std::cout << 3;
 
 	return 0;

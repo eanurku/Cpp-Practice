@@ -1,50 +1,54 @@
 #include <iostream>
+#include <deque>
+#include <algorithm>
 using namespace std;
 
-// Enter your code for reversed_binary_value<bool...>()
+void printKMax(int arr[], int n, int k){
+	//Write your code here.
+    std::deque<int> deque;
+    int maxElement=-1;
+    for(int i=0;i<n;i++){
+        deque.push_back(arr[i]);
+        if(maxElement<arr[i]){
 
+        	maxElement=arr[i];
+        }
 
-template<bool...digits>
-int reversed_binary_value(){
+        if(deque.size()==k){
 
-	int size=sizeof...(digits);
-	bool result[size]={digits...};
-	int sum=0;
-	int muliplier_values[]={1,2,4,8,16,32};
-	int i=0;
-	for(auto e:result){
-		sum+=e*muliplier_values[i];
-		i++;
-	}
-	return sum;
+            cout<<maxElement;
+
+            if(i==n-1){
+                cout<<"";
+            }else{
+                cout<<" ";
+            }
+            int removedElement=deque.front();
+            deque.pop_front();
+            if(maxElement==removedElement){
+            	maxElement=*(std::max_element(deque.begin(), deque.end()));
+            }
+
+        }
+    }
+    cout<<"\n";
 }
 
-template <int n, bool...digits>
-struct CheckValues {
-  	static void check(int x, int y)
-  	{
-    	CheckValues<n-1, 0, digits...>::check(x, y);
-    	CheckValues<n-1, 1, digits...>::check(x, y);
-  	}
-};
 
-template <bool...digits>
-struct CheckValues<0, digits...> {
-  	static void check(int x, int y)
-  	{
-    	int z = reversed_binary_value<digits...>();
-    	std::cout << (z+64*y==x);
-  	}
-};
 
-int main()
-{
-  	int t; std::cin >> t;
+int main(){
 
-  	for (int i=0; i!=t; ++i) {
-		int x, y;
-    	cin >> x >> y;
-    	CheckValues<6>::check(x, y);
-    	cout << "\n";
+	int t;
+	cin >> t;
+	while(t>0) {
+		int n,k;
+    	cin >> n >> k;
+    	int i;
+    	int arr[n];
+    	for(i=0;i<n;i++)
+      		cin >> arr[i];
+    	printKMax(arr, n, k);
+    	t--;
   	}
+  	return 0;
 }

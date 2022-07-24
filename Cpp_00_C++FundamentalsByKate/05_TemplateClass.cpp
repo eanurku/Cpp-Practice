@@ -42,7 +42,7 @@ int main() {
 	cout<<stringSum.accum("sonu ")<<endl;
 	cout<<stringSum.accum("conu ")<<endl<<endl;
 
-//accum function uses + operot to add item which is not defined in person so throws below error
+//accum function uses + operator to add item which is not defined in person so throws below error
 //ERROR:no match for 'operator+' (operand types are 'Person' and 'Person')
 //	Accum<Person> objectSum(Person("",""));
 //	objectSum.accum(Person("abc","xyz"));

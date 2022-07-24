@@ -35,7 +35,7 @@ int main() {
 	for_each(begin(v2),end(v2),[](auto e){cout<<e<<" ";});cout<<endl;
 	cout<<endl;
 
-	//iota() increment by 1on seed value
+	//iota() increment by 1 on seed value
 	auto v3=source;
 	cout<<"iota()"<<endl;
 	for_each(begin(v3),end(v3),[](auto e){cout<<e<<" ";});cout<<endl;
