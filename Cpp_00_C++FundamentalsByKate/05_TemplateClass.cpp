@@ -23,6 +23,7 @@ public:
 };
 
 int main() {
+
 	Accum<int> sum(0);
 
 	cout<<sum.accum(10)<<endl;

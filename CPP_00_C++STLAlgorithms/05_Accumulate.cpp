@@ -12,7 +12,7 @@
 #include <vector>
 #include <algorithm>
 #include <random>
-
+#include<string>
 using namespace std;
 
 int main() {

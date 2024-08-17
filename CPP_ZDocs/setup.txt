@@ -1,0 +1,3 @@
+setup c++
+1.install eclipse ide for c/c++
+2.install g++ compiler using mingw for windows

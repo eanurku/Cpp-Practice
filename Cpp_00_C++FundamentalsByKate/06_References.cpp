@@ -26,13 +26,16 @@ int main() {
 	int num=10;
 	int& referenceOfNum=num;
 	cout<<num<<" "<<referenceOfNum<<endl;
+
 	referenceOfNum=33;
 	cout<<num<<" "<<referenceOfNum<<endl;
 
-	//Note:reference cannot be assigned literals/constant value
+	//Note:reference cannot be assigned literals/constant value while defining it
 	//int& refofA=10;//ERROR:cannot bind non-const lvalue reference of type 'int&' to an rvalue of type 'int'
-    int const& refofAA=10;//constant value ONLY  assigned to const references
-    cout<<refofAA<<endl;
+
+    int const& constRef=10;//constant value ONLY  assigned to const references while defining
+    //constRef=30;//ERROR
+    cout<<constRef<<endl;
 
 
     //Note:reference cannot be declared without initialization

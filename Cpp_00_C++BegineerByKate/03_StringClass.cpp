@@ -5,8 +5,6 @@
  *      Author: anura
  */
 
-
-
 #include <iostream>
 using std::cout;
 using std::cin;

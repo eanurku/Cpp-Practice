@@ -25,7 +25,7 @@ int main() {
     //reverse_copy()
     string sentence1="i am good";
     string revSentence1(sentence1.size(),' ');
-    cout<<sentence1<<endl;
+    cout<<sentence1<<" "<<revSentence1<<endl;
     reverse_copy(begin(sentence1), end(sentence1), begin(revSentence1));
     cout<<revSentence1<<endl;
     cout<<endl;

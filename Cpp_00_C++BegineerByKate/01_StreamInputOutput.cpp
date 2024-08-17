@@ -4,16 +4,10 @@
  *  Created on: Jan 30, 2022
  *      Author: anura
  */
-
 #include <iostream>
-int main() {
+int main(){
 
-
-	std::cout << "hello";
-	std::cout << "hello" << '\n';
-	std::cout << "hello"<< '\n';
-	std::cout << 3;
-
+	std::cout<<"hello";
 	return 0;
 }
 

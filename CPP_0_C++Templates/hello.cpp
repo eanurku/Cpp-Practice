@@ -2,6 +2,8 @@
 
 #include<iostream>
 #include "Account.h"
+#define fun(x) #x
+
 using namespace std;
 
 
@@ -12,8 +14,8 @@ T maxFunc(T first,T second){
 
 int main(){
 
-	cout<<maxFunc<string>("anu", "gonu")<<endl;
-
+	//cout<<maxFunc<string>("anu", "gonu")<<endl;
+	cout<<fun(rdwdew);
 	return 0;
 
 }

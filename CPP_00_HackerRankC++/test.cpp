@@ -9,11 +9,18 @@
 #include <iostream>
 #include <cstdio>
 #include <cstring>
+#include <ctime>
+#define LOOP(i,n) for(int i=0;i<=n;i++)
 using namespace std;
 
 int main(void) {
-	int x=33;
-	auto twiceFunc=[=]() mutable {return x=x*2;};
-	cout<<twiceFunc()<<" "<<x;
+	time_t start,end;
+	time(&start);
+	LOOP(i,1000000000){
+		;
+	}
+
+	time(&end);
+	cout<<"time="<<difftime(end,start);
 	return EXIT_SUCCESS;
 }

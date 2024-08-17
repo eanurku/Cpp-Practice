@@ -23,9 +23,11 @@ int main() {
 
 	cout<<p1.getName()<<" "<<t1.getName()<<endl;
 
-	p1=t1;//copy child object to parent object,causes slicing
+	p1=t1;//copy child object to parent object using copy assignment causes slicing
+	Person p2=t1;//copy child object to parent object using constructor to parent causes slicing
 
-	cout<<p1.getName()<<endl;//child overridden function is not called as it is sliced already and not available.
+
+	cout<<p1.getName()<<" "<<p2.getName()<<endl;//child overridden function is not called as it is sliced already and not available.
 
 	func(t1);
 
