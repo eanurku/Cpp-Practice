@@ -12,8 +12,8 @@
 using namespace std;
 
 int main(void) {
-	puts("intro to DS and Algo in C++");
-	int val{10};
-	cout<<val<<endl;
+
+	constexpr int a=10;
+
 	return EXIT_SUCCESS;
 }

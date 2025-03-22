@@ -3,7 +3,10 @@ clean:
 	
 all:  test  01_ArrayClass 02_ArrayClassImproved 03_ArrayCopyConstructor 04_ArrayCopyAssignment 05_ArrayMoveConstructor 06_ArrayClassTemplate
 
-test: 01_ArrayClass.cpp
+test: test.cpp
+	g++ -o test test.cpp
+
+01_ArrayClass: 01_ArrayClass.cpp
 	g++ -o 01_ArrayClass 01_ArrayClass.cpp
 
 02_ArrayClassImproved: 02_ArrayClassImproved.cpp
@@ -20,12 +23,3 @@ test: 01_ArrayClass.cpp
 	
 06_ArrayClassTemplate: 06_ArrayClassTemplate.cpp
 	g++ -o 06_ArrayClassTemplate 06_ArrayClassTemplate.cpp
-
-test: 01_ArrayClass.cpp
-	g++ -o 01_ArrayClass 01_ArrayClass.cpp
-
-test: 01_ArrayClass.cpp
-	g++ -o 01_ArrayClass 01_ArrayClass.cpp
-
-test: 01_ArrayClass.cpp
-	g++ -o 01_ArrayClass 01_ArrayClass.cpp

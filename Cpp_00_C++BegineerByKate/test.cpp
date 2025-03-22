@@ -6,12 +6,10 @@
 // Description : Hello World in C, Ansi-style
 //============================================================================
 
-#include <iostream>
-#include <cstdio>
-#include <cstring>
+#include<iostream>
 using namespace std;
+int main(){
 
-int main(void) {
-	puts("!!!Hello World!!! Cpp_00_C++BegineerByKate");
-	return EXIT_SUCCESS;
+
+	cout<<"hello 123";
 }
