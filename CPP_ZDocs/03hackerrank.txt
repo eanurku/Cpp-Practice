@@ -1,0 +1,8 @@
+stoi --string to integer conversion
+to_string()--any type  to string conversion
+
+<sstream> header
+stringstream class
+
+class vs struct
+The data members of a class are private by default and the members of a structure are public by default

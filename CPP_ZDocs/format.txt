@@ -1,0 +1,6 @@
+std::uppercase  std::nouppercase
+std::fixed  std::scientific
+std::hex  std::showbase
+std::left  std::right
+std:showpos std::noshowpos
+std::setw()  std::setprecision()  std::setfill()  
