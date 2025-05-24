@@ -9,18 +9,19 @@
 #include<iostream>
 #include<string>
 #include <time.h>
+#include <vector>
+#include <limits.h>
 
 using namespace std;
 
 
 int main(){
 
-	auto idOdd=[](auto e){return e%2!=0;};
-	cout<<idOdd(2)<<endl;
 
-	if(0){
-		cout<<"true";
-	}
+
+	int a=INT32_MAX;
+	vector<int> v(10);
+	cout<<v.size();
 
 	return 0;
 }

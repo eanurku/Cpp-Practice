@@ -69,6 +69,20 @@ int main() {
     	cout<<"search() : Not found matching sublist in list starting"<<endl<<endl;
     }
 
+    //stl search()  : search a substring  in string
+
+    string source="anurag";
+    string token="rag";
+
+    auto matchPos=search(begin(source), end(source), begin(token), end(token));
+
+    if(matchPos !=end(source)){
+    	cout<<"token matched in source at : "<<matchPos-begin(source)<<endl;
+    }else{
+    	cout<<"token not matched in source "<<endl;
+    }
+
+
     //stl find_end() ~  search()
      matchingSublistStart=find_end(begin(list), end(list), begin(sublist),end(sublist));
      matchingSublistStart--;//it will point to 7

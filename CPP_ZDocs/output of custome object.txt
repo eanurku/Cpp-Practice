@@ -1,0 +1,4 @@
+ostream& operator<<(ostream& os,Box box){
+ 	os<<box.getLength()<<" "<<box.getBreadth()<<" "<<box.getHeight();
+ 	return os;
+ }

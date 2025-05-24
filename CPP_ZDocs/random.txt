@@ -1,0 +1,7 @@
+header :
+#include <time.h>
+
+code:
+srand(time(0));
+secret = rand() % 1000 + 1;
+
