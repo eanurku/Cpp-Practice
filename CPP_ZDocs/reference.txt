@@ -1,0 +1,24 @@
+**create a reference
+
+int var=10;
+int & refVar=var;
+
+*reference are always initialized
+*references are just alias of original variable
+*references are used in function parameter passing
+
+
+** not allowed
+	int const a=10;
+	int& ref_a=a;// throws ERROR
+
+
+** function parameter passing
+
+fun1(int &a)
+fun2(int const a)
+fun3(int const& a)
+
+fun1(20)//ERROR
+fun2(20)//ERROR
+fun3(20)//Ok ,will only work with this function 

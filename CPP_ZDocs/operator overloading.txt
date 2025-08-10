@@ -1,0 +1,15 @@
+ ** operator <<
+  ostream& operator<<(ostream& os,Box& box){
+    os<<box.getLength()<<" "<<box.getBreadth()<<" "<<box.getHeight();
+    return os;
+  }
+
+** operator <
+  bool operator<(Box &other){
+    return this->l==other.l?(this->b==other.b?this->h<other.h:this->b<other.b):this->l<other.l;
+  }
+
+**operator <
+  bool operator<(int i,Box &other){
+    return i<other.l;
+  }

@@ -1,0 +1,7 @@
+# constant function
+ function which do not allow modification to member variables of class.
+ ex:
+ int fun() const {
+ 	-------
+ 	-------
+ }

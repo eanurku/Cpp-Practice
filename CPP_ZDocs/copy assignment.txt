@@ -1,0 +1,11 @@
+	IntArray& operator=(IntArray source) { //copy by custom constructor for  parameter source
+		//swap pointers and size
+		int *tmpPtr = source.m_ptr;
+		source.m_ptr = m_ptr;
+		m_ptr = tmpPtr;
+		int tmpValue = source.size;
+		source.size = size;
+		size = tmpValue;
+		return *this;
+		//source destructor will be called to clean up old values
+	}

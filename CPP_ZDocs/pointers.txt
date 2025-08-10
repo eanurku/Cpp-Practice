@@ -1,0 +1,23 @@
+**
+int a=12;
+int* pa=&a;
+
+**pointer to int
+**pointer to int constant
+
+ex: int const *p1=&a;
+pa=&b;//OK
+*pa=13;//ERROR
+
+**constant pointer to int
+
+ex: int  * const p1=&a;
+pa=&b;//ERROR
+*pa=13;//OK
+
+**constant pointer to constant int 
+
+ex: int const * const p1=&a;
+pa=&b;//ERROR
+*pa=13;//ERROR
+

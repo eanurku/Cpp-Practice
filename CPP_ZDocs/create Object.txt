@@ -1,0 +1,7 @@
+# create without new
+Account ac1(10);
+
+
+#with new operator
+
+Account *ac=new Account(10);

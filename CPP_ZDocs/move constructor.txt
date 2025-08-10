@@ -1,0 +1,11 @@
+	//move constructor
+	IntArray(IntArray&& source){
+		cout<<" move constructor is called..."<<endl;
+		//transfer data
+		m_ptr=source.m_ptr;
+		size=source.size;
+
+		//clear
+		source.m_ptr=nullptr;
+		source.size=0;
+	}

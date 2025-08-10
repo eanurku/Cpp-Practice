@@ -1,8 +1,54 @@
-stoi --string to integer conversion
-to_string()--any type  to string conversion
+** stoi --string to integer conversion
+ex:
+    getline(cin, n_temp);
+    int n = stoi(ltrim(rtrim(n_temp)));
+    
+** max function takes multiple arguments
 
+ex: find max of four values
+    int maxVal=max({a,b,c,d});
+    
+
+** stringstream
 <sstream> header
 stringstream class
+
+convert string with comma separated values into an array of values
+*
+vector<int> parseInts(string str) {
+    vector<int> v;
+    stringstream ss(str);
+    int val;
+    char ch;
+    while(ss>>val){
+        v.push_back(val);
+        ss>>ch; }
+    return v;
+}
+*
+vector<int> parseInts(string str) {
+    vector<int> v;
+    stringstream ss(str);
+    string val;
+    while(getline(ss,val,',')){
+        v.push_back(stoi(val)); }
+    return v;
+}
+
+** concat different type for output using stringstream
+
+	string to_string(){
+        stringstream stream;
+        stream<< age <<","<<first_name<<","<<last_name<<"," << standard;
+        return stream.str();
+    }  
+** to_string()
+--any type  to string conversion
+    string to_string(){
+        return std::to_string(age) + ","+first_name+","+last_name+"," + std::to_string(standard);
+    }
+
+
 
 class vs struct
 The data members of a class are private by default and the members of a structure are public by default

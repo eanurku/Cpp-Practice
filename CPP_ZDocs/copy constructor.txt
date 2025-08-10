@@ -1,0 +1,9 @@
+	IntArray(const IntArray &source) {
+		if (source.size != 0) {
+			m_ptr = new int[source.size];
+			size = source.size;
+			for (int i = 0; i < source.size; i++) {
+				m_ptr[i] = source.m_ptr[i];
+			}
+		}
+	}

@@ -1,0 +1,19 @@
+** slicing in pass by value
+
+ fun(childObj)
+ 
+void  fun(Parent PObj){ //slicing happens here
+ 
+ }
+ 
+ *slicing happens if passing a child object to function by value , with parent paramer type
+ 
+ 
+ * to avoid slicing pass by reference
+ 
+ fun(childObj)
+ 
+void  fun(Parent& PObj){ //slicing won't happens here
+ 
+ }
+ 

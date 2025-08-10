@@ -1,0 +1,18 @@
+** 
+
+class parent{
+	
+	int fun(string s){....}
+	
+	~parent(){...}
+
+}
+
+class child(){
+	int fun(string s){..}
+
+	~child(){...}
+
+}
+
+*if you are making a make function virtual then also make destructor virtual
