@@ -38,9 +38,19 @@ int main() {
 
 	partial_sort_copy(begin(list2),end(list2),begin(copyList),end(copyList));
 
-	cout<<"after partial sort"<<endl;
+	cout<<"after partial sort: first page "<<endl;
 	for_each(begin(copyList),end(copyList),[](auto e){cout<<e<<" ";});cout<<endl;
 
+
+
+	cout<<"before partial sort:second page "<<endl;
+	for_each(begin(list2), end(list2), [](auto e){cout<<e<<" ";});cout<<endl;
+
+	auto res=partial_sort_copy(begin(list2), end(list2), begin(copyList), end(copyList));
+
+	cout<<"after partial sort:second page "<<*res <<endl;
+
+	for_each(begin(copyList), end(copyList), [](auto e){cout<<e<<" ";});cout<<endl;
 	return 0;
 
 

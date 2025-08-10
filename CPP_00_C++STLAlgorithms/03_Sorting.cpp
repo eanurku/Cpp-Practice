@@ -123,6 +123,7 @@ int main() {
 	for(auto e:list){
 		cout<<e<<" ";
 	}
+	cout<<endl;
 	partial_sort(begin(list)+pageSize, begin(list)+2*pageSize, end(list));//get next page sorted smallest elements
 	for(auto e:list){
 		cout<<e<<" ";

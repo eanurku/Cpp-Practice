@@ -12,7 +12,7 @@
 using namespace std;
 
 int main() {
-	vector<int> v1;
+	vector<int> v1(20);
 	fill_n(back_inserter(v1), 10, 2);
 	cout<<"v1 is:"<<endl;
 	for_each(begin(v1),end(v1),[](auto e){cout<<e<<" ";});cout<<endl;

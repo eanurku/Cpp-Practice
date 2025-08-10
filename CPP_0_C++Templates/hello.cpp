@@ -15,7 +15,10 @@ T maxFunc(T first,T second){
 int main(){
 
 	//cout<<maxFunc<string>("anu", "gonu")<<endl;
-	cout<<fun(rdwdew);
+
+	Account *first=new Account(10);
+	cout<<(*first).getReport();
+	//cout<<fun(rdwdew);
 	return 0;
 
 }

@@ -16,10 +16,15 @@ int main() {
 	vector<int> list{1,2,3,4,5};
 
 	auto sum=accumulate(begin(list), end(list), 0,	[](auto total,auto e) -> double {
-		if(e%2==0)
-			return total+0.1;
-		else
+		if(e%2==0){
+			cout<<"sum="<<total<<endl;
+			return total+2;
+		}
+		else{
+			cout<<"sum="<<total<<endl;
 			return total+0;
+		}
+
 	});
 
 	cout<<"sum="<<sum<<endl;

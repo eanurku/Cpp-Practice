@@ -52,7 +52,7 @@ int main() {
 
 
 	MyClass m{};
-	m.use();
+	//m.use();
 
 	return 0;
 }
