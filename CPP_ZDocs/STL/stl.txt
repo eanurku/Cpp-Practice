@@ -1,0 +1,97 @@
+**Algorithms,Collections,Iterators
+Headers:
+<algorithm>
+
+<array> <vector> <list> <stack>  <set> <map> <queue>
+<string>
+<iterator>
+<utility> <tuple>
+<numeric>
+<complex> <cmath>
+<regex> <chrono>  
+
+
+
+**counting 
+count()
+count_if()
+
+all_of()
+none_of()
+any_of()
+
+**findings
+*returns iterator of first match
+*return iterator can be used to as start iterator to find next match
+
+find()
+find_if()
+find_if_not()
+find_first_of()
+search()
+find_end()
+search_n()
+adjacent_find()
+
+**sort
+
+sort()
+stable_sort()
+isSorted()
+
+max_element()
+min_element()
+
+upper_bound()
+lower_bound()
+
+shuffle()
+
+partial_sort()
+is_sorted_until()
+partial_sort_copy()
+
+**comparing
+
+equal()
+mismatch()
+
+** Accumulate
+
+accumulate()
+for_each()
+
+** Generate and manipulate collections
+
+copy()
+copy_if()
+copy_n()
+
+
+remove()
+remove_if()
+erase()
+
+
+fill()
+fill_n()
+iota()
+generate()
+
+replace()
+
+transform()
+
+unique()
+unique_copy()
+
+
+iter_swap()
+reverse()
+reverse_copy()
+
+partition()
+stable_partition()
+
+rotate()
+rotate_copy()

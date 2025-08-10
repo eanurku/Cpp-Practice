@@ -1,0 +1,31 @@
+** initialization
+*
+vector<int> v = {11, 23, 45, 89};
+*
+vector<int> v;
+// Pushing Value one by one
+v.push_back(11);
+v.push_back(23);
+v.push_back(45);
+v.push_back(89);
+
+* 
+vector<type> v(n, val);
+vector<type> v(arr, arr + n);
+vector<type> v2(v1.begin(), v1.end());
+
+** Insert
+
+insert(pos,element)	
+insert(pos,count,element)	
+insert(pos,startIterator,endIterator)	
+insert(pos,{e1,e2,e3,...})	
+	
+	
+** Delete
+
+erase(remove(...),end)
+erase(posIterator)
+erase(startIterator,endIterator)
+
+	
