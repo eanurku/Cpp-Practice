@@ -6,11 +6,10 @@
  */
 #define io(v) cin>>v
 #define toStr(x) #x
-#define FUNCTION(m,y)
 #define INF INT_MAX
 #define foreach(v, i) for(int i=0;i<v.size();i++)
-#define minimum(m,y) m=m>y?y:m
-#define maximum(m,y) m=m<y?y:m
+#define FUNCTION(m,sign)  int m(int& result,int& val){ result= result sign val? result:val; }
+
 
 #include <iostream>
 #include <vector>
@@ -42,6 +41,13 @@ int main(){
 	return 0;
 
 }
+/*
+input:
+5
+32 332 -23 -154 65
+output:
+Result = 486
 
+ */
 
 

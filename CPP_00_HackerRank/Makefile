@@ -1,7 +1,7 @@
 clean:
 	-del -f *.exe
 	
-all:  test 01_Precision 02_StringsSwapCharacter 03_StringStream 11_InheritanceProtected
+all:  test 01_Precision 02_StringsSwapCharacter 03_StringStream 10_FormattingFloatingNumbers 11_InheritanceProtected 14_Preprocessor
 
 test: test.cpp
 	g++ -o test test.cpp
@@ -17,3 +17,9 @@ test: test.cpp
 
 11_InheritanceProtected: 11_InheritanceProtected.cpp
 	g++ -o 11_InheritanceProtected 11_InheritanceProtected.cpp
+
+10_FormattingFloatingNumbers: 10_FormattingFloatingNumbers.cpp
+	g++ -o 10_FormattingFloatingNumbers 10_FormattingFloatingNumbers.cpp
+
+14_Preprocessor: 14_Preprocessor.cpp
+	g++ -o 14_Preprocessor 14_Preprocessor.cpp

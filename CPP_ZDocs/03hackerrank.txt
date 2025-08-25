@@ -41,7 +41,7 @@ vector<int> parseInts(string str) {
         stringstream stream;
         stream<< age <<","<<first_name<<","<<last_name<<"," << standard;
         return stream.str();
-    }  
+    }
 ** to_string()
 --any type  to string conversion
     string to_string(){
@@ -49,6 +49,9 @@ vector<int> parseInts(string str) {
     }
 
 
+** iter_swap
+  iter_swap(begin(s1), begin(s2));
 
+**
 class vs struct
 The data members of a class are private by default and the members of a structure are public by default

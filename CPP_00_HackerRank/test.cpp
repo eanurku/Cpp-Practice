@@ -14,13 +14,6 @@
 using namespace std;
 
 int main(void) {
-	time_t start,end;
-	time(&start);
-	LOOP(i,1000000000){
-		;
-	}
 
-	time(&end);
-	cout<<"time="<<difftime(end,start);
 	return EXIT_SUCCESS;
 }
