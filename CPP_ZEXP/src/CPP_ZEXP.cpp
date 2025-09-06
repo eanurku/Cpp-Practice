@@ -6,15 +6,15 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include <iostream>
+#include<iostream>
+
 using namespace std;
 
 int main(){
 
 
-	int const a=10;
-	int& ref_a=a;
+	cout<<"i love coding and building apps";
 
-			cout<<ref_a;
 	return 0;
+
 }
